@@ -18,7 +18,7 @@ class UsersSeeder extends Seeder
                 'firstname' => 'Rodrigo',
                 'lastname' => 'Oliveira',
                 'email' => 'contato@rodrigo.com',
-                'password' => bcrypt('12345678'),
+                'password' => ('12345678'),
         ]);
     }
 }

@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Collection;
 use App\Models\Categoria;
 use App\Models\User;
+use App\Models\Produto;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Produto>
@@ -28,8 +29,8 @@ class ProdutoFactory extends Factory
             'preco' => $this->faker->randomNumber(2),
             'slug' => Str::slug($nome),
             'imagem' => $this->faker->imageUrl(400, 400),
-            'id_categoria' => Categoria::pluck('id')->random(),
             'id_user' => User::pluck('id')->random(),
+            'id_categoria' => Categoria::pluck('id')->random(),
         ];
     }
 }
