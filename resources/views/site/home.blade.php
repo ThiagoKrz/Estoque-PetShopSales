@@ -3,7 +3,7 @@
 @section('conteudo')
 
 <div class="row container">
-
+    
     @foreach ($produtos as $produto)
     <div class="col s12 m3">
         <div class="card">

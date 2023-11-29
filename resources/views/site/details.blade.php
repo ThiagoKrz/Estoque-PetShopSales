@@ -10,7 +10,7 @@
         <h4>{{$produto->nome}}</h4>
         <h4> R$ {{number_format($produto->preco, 2, ',', '.')}}</h4>
         <p>{{$produto->descricao}}</p>
-        <p>Vendido por: {{$produto->user->firstname}}<br>
+        <p>Cadastrado por: {{$produto->user->firstname}}<br>
             Categoria: {{$produto->categoria->nome}}
         </p>
 

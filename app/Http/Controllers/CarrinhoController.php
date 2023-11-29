@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Services\VendaService;
 use Illuminate\Http\Request;
 
 class CarrinhoController extends Controller
@@ -47,7 +47,12 @@ class CarrinhoController extends Controller
         \Cart::clear();
         return redirect()->route('site.carrinho')->with('aviso', 'Seu carrinho foi esvaziado!');
     }
+    public function finalizar(Request $request){
+        $itens = \Cart::getContent();
+        $vendaService = new VendaService();
+        $vendaService->finalizarVenda($itens, \Auth::user());
 
+        return redirect()->route('site.carrinho')->with('sucesso', 'Compra finalizada!');    }
 
 
 }

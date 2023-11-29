@@ -52,7 +52,7 @@
         @foreach ($itens as $item)
         <tbody>
           <tr>
-            <td><img src="{{$item->attributes->image}}" alt="" width="500" class="responsive-img circle"></td>
+            <td><img src=" asset({{$item->attributes->image}})" alt="" width="500" class="responsive-img circle"></td>
             <td>{{$item->name}}</td>
             <td>R$ {{number_format($item->price, 2, ',', '.')}}</td>
 
@@ -91,7 +91,8 @@
       <div class="row container center">
         <a href="{{route('site.index')}}" class="btn-large waves-effect waves-light blue">Continuar comprando<i class="material-icons right">arrow_back</i></a>
         <a href="{{route('site.limparcarrinho')}}" class="btn-large waves-effect waves-light blue">Limpar carrinho<i class="material-icons right">clear</i></a>
-        <button class="btn-large waves-effect waves-light green">Finalizar pedido<i class="material-icons right">check</i></button>
+
+
       </div>
 
 
